@@ -5,8 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.database import Base, engine
 from app import models
 
-from app.api import detections, calendar, sectors_api, visits, export
-
+from app.api import detections, calendar, sectors_api, visits, export, alerts
 
 app = FastAPI(
     title="Gorongosa FireLink API",
@@ -32,6 +31,7 @@ app.include_router(calendar.router, prefix="/api/v1")
 app.include_router(sectors_api.router, prefix="/api/v1")
 app.include_router(visits.router, prefix="/api/v1")
 app.include_router(export.router, prefix="/api/v1")
+app.include_router(alerts.router, prefix="/api/v1")
 
 @app.get("/")
 def root():
