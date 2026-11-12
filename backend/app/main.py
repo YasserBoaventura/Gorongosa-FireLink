@@ -27,12 +27,11 @@ app.add_middleware(
 Base.metadata.create_all(bind=engine)
 
 # Registar routers
-app.include_router(detections.router)
-app.include_router(calendar.router)
-app.include_router(sectors_api.router)
-app.include_router(visits.router)
-app.include_router(export.router)
-
+app.include_router(detections.router, prefix="/api/v1")
+app.include_router(calendar.router, prefix="/api/v1")
+app.include_router(sectors_api.router, prefix="/api/v1")
+app.include_router(visits.router, prefix="/api/v1")
+app.include_router(export.router, prefix="/api/v1")
 
 @app.get("/")
 def root():
