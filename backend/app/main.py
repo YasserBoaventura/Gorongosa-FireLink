@@ -17,13 +17,12 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://gorongosa-fire-link.vercel.app"
+        "https://gorongosa-fire-link-j7g8rrseq-myproject-e143.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Criar tabelas
 Base.metadata.create_all(bind=engine)
 
