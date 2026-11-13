@@ -16,7 +16,9 @@ app = FastAPI(
 # Configuração CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Restringir em produção
+    allow_origins=[
+        "https://gorongosa-fire-link.vercel.app/"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
