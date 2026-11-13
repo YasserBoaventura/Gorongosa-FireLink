@@ -15,7 +15,8 @@ class Settings(BaseSettings):
     gorongosa_east: float = 34.9
     gorongosa_north: float = -18.6
 
-    database_url: str = "mysql+pymysql://root:Boaventura@localhost:3306/fastapi_db"
+    # database_url: str = "mysql+pymysql://root:Boaventura@localhost:3306/fastapi_db"
+    database_url: str = "mysql+pymysql://root:@localhost:3306/fastapi_db"
 
     model_config = SettingsConfigDict(
         env_file=BASE_DIR / ".env",
