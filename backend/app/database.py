@@ -5,14 +5,15 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 from app.config import settings
 
 
+
 engine = create_engine(
     settings.database_url,
-    connect_args=(
-        {"check_same_thread": False}
-        if settings.database_url.startswith("sqlite")
-        else {}
-    ),
-    pool_pre_ping=True
+    pool_pre_ping=True,
+    connect_args={
+        "ssl": {
+            "check_hostname": True
+        }
+    }
 )
 
 SessionLocal = sessionmaker(
