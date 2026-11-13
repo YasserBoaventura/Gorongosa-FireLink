@@ -10,6 +10,8 @@ class Settings(BaseSettings):
 
     nasa_firms_map_key: str = "c85c02cb0d1f92f10a8fb6c07306fe0b"
 
+
+
     gorongosa_west: float = 34.0
     gorongosa_south: float = -19.5
     gorongosa_east: float = 35.0
