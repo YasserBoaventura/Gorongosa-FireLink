@@ -17,7 +17,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://gorongosa-fire-link.vercel.app/"
+        "https://gorongosa-fire-link.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
